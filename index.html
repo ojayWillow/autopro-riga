@@ -75,9 +75,8 @@
         /* ---- HERO ---- */
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            background: 
-                linear-gradient(135deg, rgba(26,26,46,.88) 0%, rgba(22,33,62,.85) 50%, rgba(15,52,96,.80) 100%),
-                url('https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&cs=tinysrgb&w=1920') center center / cover no-repeat;
+            background: linear-gradient(135deg, rgba(26,26,46,.90) 0%, rgba(22,33,62,.87) 50%, rgba(15,52,96,.83) 100%),
+                        url('https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&cs=tinysrgb&w=1920') center center / cover no-repeat;
             background-attachment: fixed;
             position: relative; overflow: hidden; padding: 120px 24px 80px;
         }
@@ -379,8 +378,379 @@
     </div>
 </section>
 
-<!-- Rest of content stays the same as previous version -->
-<!-- I'm keeping the rest of the HTML identical to save space -->
+<!-- QUICK SERVICES -->
+<div class="quick-services">
+    <div class="quick-inner">
+        <div class="quick-grid">
+            <a href="#booking" class="quick-item">
+                <span class="popular-badge">Popular</span>
+                <div class="quick-icon"><i class="fas fa-oil-can"></i></div>
+                <h3>Eļļas maiņa</h3>
+                <div class="quick-price">€35–55</div>
+                <div class="quick-time">~30 min</div>
+            </a>
+            <a href="#booking" class="quick-item">
+                <span class="popular-badge">Popular</span>
+                <div class="quick-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Auto diagnostika</h3>
+                <div class="quick-price">€25–40</div>
+                <div class="quick-time">~30 min</div>
+            </a>
+            <a href="#booking" class="quick-item">
+                <div class="quick-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Auto elektriķis</h3>
+                <div class="quick-price">Sazinies</div>
+                <div class="quick-time">pēc diagnostikas</div>
+            </a>
+            <a href="#booking" class="quick-item">
+                <div class="quick-icon"><i class="fas fa-compact-disc"></i></div>
+                <h3>Bremžu kluču maiņa</h3>
+                <div class="quick-price">€60–120</div>
+                <div class="quick-time">~1 h</div>
+            </a>
+        </div>
+    </div>
+</div>
 
+<!-- SERVICES -->
+<section id="services">
+    <div class="section-inner">
+        <div class="section-label"><i class="fas fa-cogs"></i> Pakalpojumi</div>
+        <h2 class="section-title">Pilns servisa klāsts</h2>
+        <p class="section-subtitle">No ātrās apkopes līdz sarežģītiem remontiem — TNP autoserviss rūpēsies par tavu auto ar garantiju.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="popular-badge">Popular</span>
+                <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Auto diagnostika</h3>
+                <p>Pilna OBD-II datora diagnostika, kļūdu nolasīšana un dzēšana, sistēmu analīze un problēmu identificēšana.</p>
+                <div class="service-meta">
+                    <span class="service-price">€25–40</span>
+                    <a href="#booking" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Pieteikt</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Auto elektriķis</h3>
+                <p>Elektriskās sistēmas diagnostika un remonts — ģeneratori, starteri, apgaismojums, vadības bloki.</p>
+                <div class="service-meta">
+                    <span class="service-price">Sazinies par cenu</span>
+                    <a href="tel:+37129412026" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Zvanīt</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <span class="popular-badge">Popular</span>
+                <div class="service-icon"><i class="fas fa-oil-can"></i></div>
+                <h3>Eļļas un filtru maiņa</h3>
+                <p>Regulāra eļļas maiņa ar kvalitatīvām sintētiskajām un pussinētiskajām eļļām. Iekļauts eļļas filtrs.</p>
+                <div class="service-meta">
+                    <span class="service-price">€35–55</span>
+                    <a href="#booking" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Pieteikt</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-compact-disc"></i></div>
+                <h3>Bremžu sistēma</h3>
+                <p>Bremžu kluču, disku un šļūteņu diagnostika un nomaiņa. Bremžu šķidruma maiņa.</p>
+                <div class="service-meta">
+                    <span class="service-price">€60–120</span>
+                    <a href="#booking" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Pieteikt</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-car"></i></div>
+                <h3>Šasijas remonts</h3>
+                <p>Amortizatoru, šarnīru, stabilizatoru un citu šasijas elementu diagnostika un remonts.</p>
+                <div class="service-meta">
+                    <span class="service-price">€50–200</span>
+                    <a href="#booking" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Pieteikt</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Kondicioniera serviss</h3>
+                <p>Kondicioniera uzpilde, dezinfekcija un noplūžu diagnostika ar modernu aprīkojumu.</p>
+                <div class="service-meta">
+                    <span class="service-price">€45–70</span>
+                    <a href="#booking" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem;">Pieteikt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+    <div class="section-inner">
+        <div class="section-label"><i class="fas fa-shield-halved"></i> Kāpēc mēs</div>
+        <h2 class="section-title">Kāpēc izvēlēties TNP</h2>
+        <p class="section-subtitle">Profesionāls serviss ar garantiju — mēs esam šeit, lai palīdzētu tavam auto kalpot ilgāk.</p>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Pieredzējuši meistari</h3>
+                <p>Profesionāļi ar ilggadēju pieredzi dažādu marku apkopē un remontā.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Garantija darbiem</h3>
+                <p>Mēs garantējam katru veikto darbu un uzstādīto detaļu — jūsu drošība ir prioritāte.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-clock"></i></div>
+                <h3>Ātra apkalpošana</h3>
+                <p>Eļļas maiņa 30 minūtēs. Pieejami bez iepriekšēja pieraksta. Mēs novērtējam jūsu laiku.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-tags"></i></div>
+                <h3>Caurspīdīgas cenas</h3>
+                <p>Nekādu slēptu izmaksu — jūs vienmēr zināsiet galīgo cenu pirms darba sākuma.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+    <div class="section-inner">
+        <div class="section-label"><i class="fas fa-star"></i> Atsauksmes</div>
+        <h2 class="section-title">Ko saka mūsu klienti</h2>
+        <p class="section-subtitle">4.0 vērtējums Google — 24+ atsauksmes no apmierināti em klientiem.</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Ļoti ātra un kvalitatīva eļļas maiņa. Iebraucu bez pieraksta un pēc 30 minūtēm jau braucu prom. Iesaku!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">AK</div>
+                    <div>
+                        <div class="review-name">Andris K.</div>
+                        <div class="review-date">2026. gada februāris</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Profesionāla pieeja un godīgas cenas. Elektrības problēmu atrisināja ātri. Noteikti atgriezīšos."</p>
+                <div class="review-author">
+                    <div class="review-avatar">LB</div>
+                    <div>
+                        <div class="review-name">Laura B.</div>
+                        <div class="review-date">2026. gada janvāris</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★☆</div>
+                <p class="review-text">"Beidzot atradu servisu, kur var uzticēties. Izskaidroja visu saprotami un neuzspiepās liekus pakalpojumus."</p>
+                <div class="review-author">
+                    <div class="review-avatar">MV</div>
+                    <div>
+                        <div class="review-name">Māris V.</div>
+                        <div class="review-date">2025. gada decembris</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+    <div class="section-inner">
+        <div class="section-label" style="color:rgba(255,255,255,.5);"><i class="fas fa-calendar-check"></i> Pieteikšanās</div>
+        <h2 class="section-title" style="color:var(--white);">Piesakies vizītei</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,.5);">Aizpildi formu un mēs sazināsimies ar tevi darba laikā vai zvani tieši tagad.</p>
+        <div class="booking-grid">
+            <div class="booking-info">
+                <h3>Kāpēc pieteikties tiešsaistē?</h3>
+                <p>Ērti un ātri — izvēlies laiku, kas tev der vislabāk, un mēs sagaidīsim tevi Zolitūdes ielā 53A.</p>
+                <ul class="booking-features">
+                    <li><i class="fas fa-check-circle"></i> Bezmaksas diagnostika pie servisa darba pasūtījuma</li>
+                    <li><i class="fas fa-check-circle"></i> Ātra atbilde darba laikā</li>
+                    <li><i class="fas fa-check-circle"></i> Cenu piedāvājums pirms darbu uzsākšanas</li>
+                    <li><i class="fas fa-check-circle"></i> Garantija visiem veiktajiem darbiem</li>
+                    <li><i class="fas fa-check-circle"></i> Iespēja atstāt auto un saņemt paziņojumu</li>
+                </ul>
+                <div style="margin-top:40px;padding:28px;background:rgba(34,197,94,.15);border-radius:12px;border:1px solid rgba(34,197,94,.3);">
+                    <p style="color:rgba(255,255,255,.85);font-size:1rem;font-weight:600;margin-bottom:12px;"><i class="fas fa-phone" style="color:#4ADE80;margin-right:10px;font-size:1.2rem;"></i> Zvaniet tūlīt:</p>
+                    <p style="margin:0;"><a href="tel:+37129412026" style="color:var(--white);font-weight:800;text-decoration:none;font-size:1.4rem;">+371 29 412 026</a></p>
+                    <p style="color:rgba(255,255,255,.6);font-size:.85rem;margin-top:8px;"><i class="fas fa-clock" style="margin-right:6px;"></i> P–Pk: 8:00–18:00 | Sa-Sv: Slēgts</p>
+                </div>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vārds *</label>
+                        <input type="text" placeholder="Jūsu vārds" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tālrunis *</label>
+                        <input type="tel" placeholder="+371 ..." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>E-pasts</label>
+                    <input type="email" placeholder="jusu@epasts.lv">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Auto marka / modelis *</label>
+                        <input type="text" placeholder="piem., VW Golf 7" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Izlaiduma gads</label>
+                        <input type="number" placeholder="piem., 2018" min="1990" max="2026">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Pakalpojums *</label>
+                    <select required>
+                        <option value="">Izvēlieties pakalpojumu</option>
+                        <option>Auto diagnostika</option>
+                        <option>Auto elektriķis</option>
+                        <option>Eļļas maiņa</option>
+                        <option>Bremžu sistēma</option>
+                        <option>Šasijas remonts</option>
+                        <option>Kondicioniera serviss</option>
+                        <option>Cits (aprakstiet zemāk)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vēlamais datums</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Vēlamais laiks</label>
+                        <select>
+                            <option value="">Izvēlieties laiku</option>
+                            <option>8:00 – 10:00</option>
+                            <option>10:00 – 12:00</option>
+                            <option>12:00 – 14:00</option>
+                            <option>14:00 – 16:00</option>
+                            <option>16:00 – 18:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Papildu komentārs</label>
+                    <textarea placeholder="Aprakstiet problēmu vai vēlmes..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit"><i class="fas fa-paper-plane"></i> Nosūtīt pieteikumu</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-inner">
+        <div class="section-label"><i class="fas fa-map-marker-alt"></i> Kontakti</div>
+        <h2 class="section-title">Atrodi mūs</h2>
+        <p class="section-subtitle">Mēs atrodamies Zolitūdē, Zemgales priekšpilsētā — ērti pieejami no Rīgas centra.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Adrese</h3>
+                <p>Zolitūdes iela 53A<br>Zemgales priekšpilsēta<br>Rīga, LV-1029</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Tālrunis</h3>
+                <p><a href="tel:+37129412026">+371 29 412 026</a></p>
+                <p style="margin-top:4px;font-size:.8rem;">P–Pk: 8:00–18:00</p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/37129412026" target="_blank" style="color:#25D366;">Rakstīt WhatsApp</a></p>
+                <p style="margin-top:4px;font-size:.8rem;">Ātra atbilde</p>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5!2d24.0469!3d56.9350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd4a5c3b9c7%3A0x1f2b3c4d5e6f7a8b!2zWm9saXTFq2RlcyBpZWxhIDUzQSwgWmVtZ2FsZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTAyOQ!5e0!3m2!1slv!2slv!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">TNP <span>autoserviss</span></a>
+                <p>Profesionāls autoserviss Rīgā — auto diagnostika, elektriķis un pilns servisa klāsts. Zolitūdes iela 53A, Zemgales priekšpilsēta. Pieejami bez iepriekšēja pieraksta.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Pakalpojumi</h4>
+                <ul>
+                    <li><a href="#services">Auto diagnostika</a></li>
+                    <li><a href="#services">Auto elektriķis</a></li>
+                    <li><a href="#services">Eļļas maiņa</a></li>
+                    <li><a href="#services">Bremžu sistēma</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>TNP autoserviss</h4>
+                <ul>
+                    <li><a href="#why">Par mums</a></li>
+                    <li><a href="#reviews">Atsauksmes</a></li>
+                    <li><a href="#contact">Kontakti</a></li>
+                    <li><a href="#">Privātuma politika</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Darba laiks</h4>
+                <ul>
+                    <li><a href="#">P–Pk: 8:00–18:00</a></li>
+                    <li><a href="#">Sestdiena: Slēgts</a></li>
+                    <li><a href="#">Svētdiena: Slēgts</a></li>
+                    <li><a href="tel:+37129412026" style="color:var(--primary);font-weight:700;margin-top:8px;display:inline-block;">29 412 026</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TNP autoserviss, Rīga. Visas tiesības aizsargātas.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/37129412026" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+    <div class="modal">
+        <button class="modal-close" onclick="document.getElementById('successModal').classList.remove('active')">&times;</button>
+        <i class="fas fa-check-circle check"></i>
+        <h2>Pieteikums nosūtīts!</h2>
+        <p>Mēs sazināsimies ar jums darba laikā. Paldies, ka izvēlējāties TNP autoservisu!</p>
+        <a href="#" class="btn btn-primary" onclick="document.getElementById('successModal').classList.remove('active');return false;">Labi</a>
+    </div>
+</div>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('successModal').classList.add('active');
+    this.reset();
+});
+
+// Smooth scroll for nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        document.getElementById('navLinks').classList.remove('active');
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.background = window.scrollY > 50 ? 'rgba(26,26,46,.98)' : 'rgba(26,26,46,.95)';
+});
+</script>
 </body>
 </html>
