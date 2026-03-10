@@ -81,13 +81,11 @@
             background: url('https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&cs=tinysrgb&w=1920') center center / cover no-repeat;
             background-attachment: fixed;
         }
-        /* Single clean dark overlay — no blue tint */
         .hero::before {
             content: ''; position: absolute; inset: 0;
             background: rgba(8,8,8,.72);
             z-index: 0;
         }
-        /* Subtle red vignette bottom-left to tie in brand colour */
         .hero::after {
             content: ''; position: absolute; inset: 0;
             background: radial-gradient(ellipse at 0% 100%, rgba(230,57,70,.18) 0%, transparent 60%);
@@ -137,7 +135,6 @@
         .btn-phone { background: #22C55E; border: none; font-size: 1.05rem; padding: 16px 36px; color: white; }
         .btn-phone:hover { background: #16A34A; box-shadow: 0 8px 25px rgba(34,197,94,.4); transform: translateY(-2px); }
 
-        /* Stats card — solid dark, no blurry glass */
         .hero-card {
             background: var(--dark-2);
             border: 1px solid rgba(255,255,255,.08);
@@ -325,20 +322,115 @@
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
+            /* Nav — slimmer */
+            .nav-inner { height: 56px; padding: 0 16px; }
+            .logo { font-size: 1.2rem; }
             .nav-links { display: none; }
-            .hamburger { display: block; }
-            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: #0a0a0a; padding: 24px; gap: 16px; }
-            .hero { background-attachment: scroll; }
-            .hero h1 { font-size: 2.5rem; }
+            .hamburger { display: block; font-size: 1.25rem; }
+            .nav-links.active {
+                display: flex; flex-direction: column;
+                position: absolute; top: 56px; left: 0; right: 0;
+                background: #0a0a0a; padding: 16px; gap: 12px;
+            }
+            .nav-links.active a { font-size: .9rem; padding: 8px 0; }
+
+            /* Hero — compact */
+            .hero {
+                background-attachment: scroll;
+                min-height: auto;
+                padding: 80px 16px 60px;
+            }
+            .hero h1 { font-size: 1.9rem; letter-spacing: -1px; margin-bottom: 12px; }
+            .hero p { font-size: .9rem; margin-bottom: 20px; }
+            .hero-badge { font-size: .7rem; padding: 4px 12px; margin-bottom: 8px; }
+            .hero-badge-green { margin-bottom: 16px; }
+            .hero-buttons { gap: 10px; }
+            .btn { padding: 11px 20px; font-size: .9rem; }
+            .btn-phone { padding: 11px 20px; font-size: .9rem; }
+
+            /* Hero stats card */
+            .hero-card { padding: 6px; margin-top: 24px; }
+            .stat-item { padding: 16px 10px; }
+            .stat-number { font-size: 1.6rem; }
+            .stat-label { font-size: .6rem; margin-top: 4px; letter-spacing: 1px; }
+
+            /* Quick services */
+            .quick-services { margin-top: -30px; }
             .quick-grid { grid-template-columns: repeat(2, 1fr); }
-            .quick-item { border-bottom: 1px solid var(--gray-100); }
-            .services-grid, .reviews-grid, .contact-grid { grid-template-columns: 1fr; }
-            .why-grid { grid-template-columns: 1fr 1fr; }
-            .section-title { font-size: 2rem; }
-            .form-row { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .sticky-call { display: block; }
-            .floating-whatsapp { bottom: 80px; }
+            .quick-item {
+                padding: 16px 12px;
+                border-bottom: 1px solid var(--gray-100);
+            }
+            .quick-icon { width: 40px; height: 40px; font-size: 1rem; margin-bottom: 8px; }
+            .quick-item h3 { font-size: .8rem; }
+            .quick-price { font-size: .75rem; }
+            .quick-time { font-size: .65rem; }
+            .popular-badge { font-size: .55rem; padding: 2px 5px; }
+
+            /* Sections */
+            section { padding: 48px 16px; }
+            .section-title { font-size: 1.5rem; letter-spacing: -.5px; margin-bottom: 10px; }
+            .section-subtitle { font-size: .9rem; }
+            .section-label { font-size: .7rem; }
+
+            /* Services */
+            .services-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+            .service-card { padding: 20px; }
+            .service-icon { width: 40px; height: 40px; font-size: 1rem; margin-bottom: 12px; }
+            .service-card h3 { font-size: 1rem; margin-bottom: 6px; }
+            .service-card p { font-size: .82rem; margin-bottom: 10px; }
+            .service-price { font-size: .95rem; }
+
+            /* Why us */
+            .why-grid { grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+            .why-icon { width: 52px; height: 52px; font-size: 1.2rem; margin-bottom: 12px; }
+            .why-item h3 { font-size: .9rem; }
+            .why-item p { font-size: .78rem; }
+
+            /* Reviews */
+            .reviews-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+            .review-card { padding: 18px; }
+            .review-stars { font-size: .8rem; margin-bottom: 10px; }
+            .review-text { font-size: .85rem; margin-bottom: 14px; }
+            .review-avatar { width: 36px; height: 36px; font-size: .8rem; }
+            .review-name { font-size: .82rem; }
+            .review-date { font-size: .7rem; }
+
+            /* Booking */
+            .booking-grid { gap: 28px; margin-top: 24px; }
+            .booking-form { padding: 20px; border-radius: 14px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .form-group { margin-bottom: 14px; }
+            .form-group label { font-size: .72rem; }
+            .form-group input, .form-group select, .form-group textarea { padding: 11px 13px; font-size: .88rem; }
+            .form-group textarea { min-height: 80px; }
+            .form-submit { padding: 13px; font-size: .92rem; }
+            .booking-info h3 { font-size: 1.1rem; }
+            .booking-info p { font-size: .85rem; margin-bottom: 16px; }
+            .booking-features li { font-size: .85rem; padding: 9px 0; gap: 8px; }
+
+            /* Contact */
+            .contact-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
+            .contact-card { padding: 18px; }
+            .contact-card i { font-size: 1.2rem; margin-bottom: 10px; }
+            .contact-card h3 { font-size: .9rem; }
+            .contact-card p { font-size: .82rem; }
+            .map-container { height: 220px; margin-top: 24px; }
+
+            /* Footer */
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 28px; }
+            footer { padding: 36px 16px 80px; }
+            .footer-col h4 { font-size: .78rem; margin-bottom: 12px; }
+            .footer-col li { margin-bottom: 7px; }
+            .footer-col a { font-size: .82rem; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .footer-bottom p { font-size: .75rem; }
+
+            /* Floating buttons */
+            .floating-whatsapp { width: 48px; height: 48px; bottom: 70px; right: 16px; }
+            .floating-whatsapp i { font-size: 1.4rem; }
+            .sticky-call { display: block; padding: 10px 16px; }
+            .sticky-call a { font-size: .95rem; gap: 8px; }
         }
 
         /* ---- MODAL ---- */
