@@ -135,26 +135,41 @@
         .btn-phone { background: #22C55E; border: none; font-size: 1.05rem; padding: 16px 36px; color: white; }
         .btn-phone:hover { background: #16A34A; box-shadow: 0 8px 25px rgba(34,197,94,.4); transform: translateY(-2px); }
 
+        /* ---- HERO CARD (redesigned) ---- */
         .hero-card {
             background: var(--dark-2);
             border: 1px solid rgba(255,255,255,.08);
-            border-radius: 20px; padding: 8px;
+            border-radius: 20px; padding: 32px;
             box-shadow: 0 24px 60px rgba(0,0,0,.6);
+            display: flex; flex-direction: column; gap: 24px;
         }
-        .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .stat-item {
-            text-align: center; padding: 28px 20px;
-            background: var(--dark-3); border-radius: 14px;
+        .hero-card-title {
+            font-size: .7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: rgba(255,255,255,.35);
+        }
+        .hero-info-row {
+            display: flex; flex-direction: column; gap: 14px;
+        }
+        .hero-info-item {
+            display: flex; align-items: center; gap: 14px;
+            padding: 16px 18px;
+            background: var(--dark-3); border-radius: 12px;
             border: 1px solid rgba(255,255,255,.05);
             transition: var(--transition);
         }
-        .stat-item:hover { border-color: rgba(230,57,70,.4); background: #222; }
-        .stat-number { font-size: 2.4rem; font-weight: 900; color: var(--white); line-height: 1; }
-        .stat-number span { color: var(--primary); }
-        .stat-label {
-            font-size: .7rem; color: rgba(255,255,255,.4);
-            margin-top: 8px; text-transform: uppercase; letter-spacing: 1.5px;
+        .hero-info-item:hover { border-color: rgba(230,57,70,.35); background: #222; }
+        .hero-info-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: rgba(230,57,70,.12); color: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; flex-shrink: 0;
         }
+        .hero-info-icon.green { background: rgba(34,197,94,.12); color: #4ADE80; }
+        .hero-info-icon.blue { background: rgba(96,165,250,.12); color: #60A5FA; }
+        .hero-info-text { display: flex; flex-direction: column; gap: 2px; }
+        .hero-info-label { font-size: .72rem; color: rgba(255,255,255,.38); font-weight: 500; }
+        .hero-info-value { font-size: .98rem; font-weight: 700; color: var(--white); }
+        .hero-divider { height: 1px; background: rgba(255,255,255,.06); }
 
         /* ---- QUICK SERVICES BAR ---- */
         .quick-services { background: var(--white); padding: 0; margin-top: -50px; position: relative; z-index: 10; }
@@ -348,11 +363,12 @@
             .btn { padding: 11px 20px; font-size: .9rem; }
             .btn-phone { padding: 11px 20px; font-size: .9rem; }
 
-            /* Hero stats card */
-            .hero-card { padding: 6px; margin-top: 24px; }
-            .stat-item { padding: 16px 10px; }
-            .stat-number { font-size: 1.6rem; }
-            .stat-label { font-size: .6rem; margin-top: 4px; letter-spacing: 1px; }
+            /* Hero card */
+            .hero-card { padding: 20px; margin-top: 24px; gap: 16px; }
+            .hero-info-item { padding: 12px 14px; gap: 12px; }
+            .hero-info-icon { width: 34px; height: 34px; font-size: .85rem; }
+            .hero-info-value { font-size: .88rem; }
+            .hero-info-label { font-size: .65rem; }
 
             /* Quick services */
             .quick-services { margin-top: -30px; }
@@ -492,22 +508,35 @@
             </div>
         </div>
         <div class="hero-card">
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">4.0<span>★</span></div>
-                    <div class="stat-label">Google vērtējums</div>
+            <div class="hero-card-title">Kāpēc izvēlēties mūs</div>
+            <div class="hero-info-row">
+                <div class="hero-info-item">
+                    <div class="hero-info-icon"><i class="fas fa-oil-can"></i></div>
+                    <div class="hero-info-text">
+                        <span class="hero-info-label">Ātrā eļļas maiņa</span>
+                        <span class="hero-info-value">30 minūtēs — bez gaidīšanas</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">24<span>+</span></div>
-                    <div class="stat-label">Atsauksmes</div>
+                <div class="hero-info-item">
+                    <div class="hero-info-icon green"><i class="fas fa-check-circle"></i></div>
+                    <div class="hero-info-text">
+                        <span class="hero-info-label">Pieraksts</span>
+                        <span class="hero-info-value">Iebraukšana bez pieraksta</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">30<span>min</span></div>
-                    <div class="stat-label">Ātrā eļļas maiņa</div>
+                <div class="hero-info-item">
+                    <div class="hero-info-icon blue"><i class="fas fa-clock"></i></div>
+                    <div class="hero-info-text">
+                        <span class="hero-info-label">Darba laiks</span>
+                        <span class="hero-info-value">P–Pk: 8:00–18:00</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">P–Pk</div>
-                    <div class="stat-label">Līdz 18:00</div>
+                <div class="hero-info-item">
+                    <div class="hero-info-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="hero-info-text">
+                        <span class="hero-info-label">Kvalitāte</span>
+                        <span class="hero-info-value">Garantija visiem darbiem</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -651,7 +680,7 @@
     <div class="section-inner">
         <div class="section-label"><i class="fas fa-star"></i> Atsauksmes</div>
         <h2 class="section-title">Ko saka mūsu klienti</h2>
-        <p class="section-subtitle">4.0 vērtējums Google — 24+ atsauksmes no apmierinātiem klientiem.</p>
+        <p class="section-subtitle">Lasiet, ko par mums saka īsti klienti — godīgas atsauksmes no ikdienas apmeklētājiem.</p>
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
